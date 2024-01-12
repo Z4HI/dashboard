@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    height: 100dvh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+}
+
+.leftside{
+
+    background-color:dodgerblue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: white;
+    
+}
+
+.leftside :nth-last-child(n){
+    margin-top: 40px;
+    
+}
+
+.leftside span {
+    margin-left: 10px;
+}
+
+.rightside{
+    background-color: ghostwhite
+}
+
+header{
+    background-color: white;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.searchbar{ 
+    width: 50%;
+    transform: translateX(-10%);
+    border-radius: 20px;
+    border: none;
+    background-color:rgb(211, 207, 207);
+}
+
+.header2{
+    background-color:darkgray;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.header2 i{
+    font-size: 30px;
+}
+
+.welcome{
+    text-align: center;
+}
+
+.mainContainer{
+    background-color: yellow;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.projects{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding: 20px;
+    text-align: center;
+}
+
+.projects :nth-child(n){
+    
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 5px dodgerblue;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+i {
+    cursor: pointer;
+}
+
+#left:hover{
+
+    color: black;
+    transform: scale(1.2);
+    transform: translateX(2px);
+    transition: all .3s ease-in;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF;
+}
+
+#right{
+    transition: all .5s ease-in ;
+}
+
+#right:hover{
+    color: dodgerblue;
+    transform: rotate(360deg);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF;
+}
+
+@keyframes rotate {
+
+    100%{
+        transform: rotate(360);
+    }
+    
+}
+@media(max-width:700px){
+
+  .projects{
+    grid-template-columns: repeat(2,1fr);
+    
+  }
+
+  .projects :nth-child(n){
+    
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .leftside{
+    font-size: 12px;
+  }
+
+  
+    
+}
+

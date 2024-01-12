@@ -16,6 +16,8 @@ body{
 
 }
 
+
+
 .leftside{
 
     background-color:dodgerblue;
@@ -25,6 +27,9 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     color: white;
+    height: 100%;
+    width: 20%;
+    position: fixed;
     
 }
 
@@ -35,6 +40,7 @@ body{
 
 .leftside span {
     margin-left: 10px;
+    
 }
 
 .rightside{
@@ -48,15 +54,16 @@ header{
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .searchbar{ 
     width: 50%;
     transform: translateX(-10%);
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     background-color:rgb(211, 207, 207);
+    padding: 5px;
 }
 
 .header2{
@@ -93,17 +100,60 @@ header{
     text-align: center;
 }
 
-.projects :nth-child(n){
+.project{
     
     margin: 10px;
     border-radius: 10px;
     border: solid 5px dodgerblue;
-    max-width: 150px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-color: ghostwhite;
+    height: 200px;
 }
+
+#calc{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/calculator.png);
+    background-position: center;
+    background-size: cover
+}
+#etch{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/etch.png);
+    background-position: center;
+    background-size: cover
+}
+#bird{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/zbird.png);
+    background-position: center;
+    background-size: cover
+}
+#rps{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/rps.png);
+    background-position: center;
+    background-size: cover
+}
+#form{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/form.png);
+    background-position: center;
+    background-size: cover
+}
+
 
 i {
     cursor: pointer;
@@ -128,6 +178,10 @@ i {
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF;
 }
 
+.other{
+    background-color: dodgerblue;
+}
+
 @keyframes rotate {
 
     100%{
@@ -135,26 +189,33 @@ i {
     }
     
 }
-@media(max-width:700px){
+@media(max-width:650px){
 
   .projects{
     grid-template-columns: repeat(2,1fr);
     
   }
 
-  .projects :nth-child(n){
-    
-    height: 200px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .leftside{
-    font-size: 12px;
+    font-size: 10px;
   }
 
+}
+
+  @media(max-width:500px){
+
+    .projects{
+      grid-template-columns: 1fr;
+    }
   
+    .leftside{
+      font-size: 5px;
+    }
+    
+}
+
+a, a:visited{
+   color: white;
     
 }
 
